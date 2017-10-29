@@ -5,7 +5,11 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import Hello from "./components/hello";
 
-const root = <Hello firstName="Alex" lastName="Cordani" />;
+const root = 
+	<div>
+		<Hello firstName="Alex" lastName="Cordani" />
+		<Hello firstName="Alex" lastName="Cordani" />
+	</div>
 
 ReactDOM.render(root, document.getElementById('root'));
 registerServiceWorker();
