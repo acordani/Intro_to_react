@@ -5,5 +5,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import Hello from "./components/hello";
 
-ReactDOM.render(<Hello firstName="Alex" lastName="Cordani" />, document.getElementById('root'));
+const root = <Hello firstName="Alex" lastName="Cordani" />;
+
+ReactDOM.render(root, document.getElementById('root'));
 registerServiceWorker();
