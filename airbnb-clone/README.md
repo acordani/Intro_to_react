@@ -97,6 +97,9 @@ You can find the most recent version of this guide [here](https://github.com/fac
 - [Something Missing?](#something-missing)
 ## Creat an App
 
+`create-react-app` + name
+`create-react-app airbnb-clone`
+
 ## Updating to New Releases
 
 Create React App is divided into two packages:
