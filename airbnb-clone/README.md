@@ -7,6 +7,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 - [Créer une aplication](#creat-an-app)
 - [Contenu des folders](#contenu-des-folders)
+- [Props](#props)
 - [Updating to New Releases](#updating-to-new-releases)
 - [Sending Feedback](#sending-feedback)
 - [Folder Structure](#folder-structure)
@@ -115,6 +116,17 @@ Il y a 2 folders.
 Dans le public folder, on va mettre les assets comme les images ou la favicon.
 
 Dans le src, on aura tout le code javascript.
+
+## Props
+
+Les props permettent d'injecter des propriétés aux components
+
+Il suffit d'injecter les propriétés dans l'appel au component
+
+
+Et de rajouter `{this.props.name}` à l'endroit où on souhaite voir la propréié s'afficher dans le jsx du component.
+
+
 
 ## Updating to New Releases
 
