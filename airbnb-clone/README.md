@@ -133,6 +133,7 @@ Et de rajouter `{this.props.name}` à l'endroit où on souhaite voir la propréi
 
 
 Nous pouvons aussi passer <Hello firstName="Alex" lastName="Cordani" />
+![2](https://user-images.githubusercontent.com/10654877/32144188-562c4366-bcb5-11e7-8199-81cfd5f67a3c.jpg)
 
 Puis dans le component, passer {this.props.firstName} {this.props.lastName}
 
