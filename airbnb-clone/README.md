@@ -6,6 +6,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 ## Table of Contents
 
 - [Créer une aplication](#creat-an-app)
+- [Contenu des folders](#contenu-des-folders)
 - [Updating to New Releases](#updating-to-new-releases)
 - [Sending Feedback](#sending-feedback)
 - [Folder Structure](#folder-structure)
@@ -100,6 +101,20 @@ You can find the most recent version of this guide [here](https://github.com/fac
 `create-react-app` + name
 
 `create-react-app airbnb-clone`
+
+`cd airbnb-clone`
+
+`npm start` Commande qui va demarrer le serveur localement sur l'ordi.
+
+## Contenu des folders
+
+Il y a 2 folders.
+* public
+* src
+
+Dans le public folder, on va mettre les assets comme les images ou la favicon.
+
+Dans le src, on aura tout le code javascript.
 
 ## Updating to New Releases
 
