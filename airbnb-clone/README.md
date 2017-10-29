@@ -98,6 +98,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 ## Creat an App
 
 `create-react-app` + name
+
 `create-react-app airbnb-clone`
 
 ## Updating to New Releases
