@@ -131,6 +131,11 @@ Et de rajouter `{this.props.name}` à l'endroit où on souhaite voir la propréi
 
 ![1](https://user-images.githubusercontent.com/10654877/32143973-0b9a46c0-bcb2-11e7-9f3e-4fe4856ca0a3.jpg)
 
+
+Nous pouvons aussi passer <Hello firstName="Alex" lastName="Cordani" />
+
+Puis dans le component, passer {this.props.firstName} {this.props.lastName}
+
 ## Updating to New Releases
 
 Create React App is divided into two packages:
