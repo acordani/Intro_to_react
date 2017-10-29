@@ -122,6 +122,7 @@ Dans le src, on aura tout le code javascript.
 Les props permettent d'injecter des propriétés aux components
 
 Il suffit d'injecter les propriétés dans l'appel au component
+![1](https://user-images.githubusercontent.com/10654877/32143973-0b9a46c0-bcb2-11e7-9f3e-4fe4856ca0a3.jpg)
 
 
 Et de rajouter `{this.props.name}` à l'endroit où on souhaite voir la propréié s'afficher dans le jsx du component.
