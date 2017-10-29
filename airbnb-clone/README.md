@@ -133,8 +133,13 @@ Et de rajouter `{this.props.name}` à l'endroit où on souhaite voir la propréi
 
 
 Nous pouvons aussi passer <Hello firstName="Alex" lastName="Cordani" />
+![2](https://user-images.githubusercontent.com/10654877/32144188-562c4366-bcb5-11e7-8199-81cfd5f67a3c.jpg)
 
 Puis dans le component, passer {this.props.firstName} {this.props.lastName}
+![1](https://user-images.githubusercontent.com/10654877/32144185-4c095cf2-bcb5-11e7-8b96-ce937bb150ab.jpg)
+
+Tout ceci revient à créer une constance root. et de mettre directement l'appel au component dedans. Du coup, on peut appeler deux fois le meme component avec si on veut des propriétés differentes.
+![3](https://user-images.githubusercontent.com/10654877/32144192-5f1f6516-bcb5-11e7-976d-1130c6e0c32a.jpg)
 
 ## Updating to New Releases
 
