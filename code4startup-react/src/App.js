@@ -23,9 +23,32 @@ class Product extends Component {
         <p>Android - 199€</p>
         <button onClick={this.buy} type="submit">BUY</button>
         <p>quantity:{this.state.qty}</p>
+        <hr/>
       </div>
     );
   }
 }
 
-export default Product;
+class Total extends React.Component {
+  render() {
+    return(
+      <h3>Total Cash: </h3>
+    )
+  }
+}
+
+class ProductList extends React.Component {
+  render() {
+    return(
+      <div>
+        <Product />
+        <Product />
+        <Product />
+        <Total />
+      </div>
+
+    )
+  }
+}
+
+export default ProductList;

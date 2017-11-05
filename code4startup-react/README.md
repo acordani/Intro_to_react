@@ -4,7 +4,7 @@
 - [Your First Component](#your-first-component)
 - [Working With Events](#working-with-events)
 - [Working With State](#working-with-state)
-- [Available Scripts](#available-scripts)
+- [Reusable Components](#reusable-components)
   - [npm start](#npm-start)
   - [npm test](#npm-test)
   - [npm run build](#npm-run-build)
@@ -174,9 +174,9 @@ Ne pas oublier qty à this.state
 
 
 
-## Available Scripts
+## Reusable Components
 
-In the project directory, you can run:
+Ajouter un component Total et un component ProductList
 
 ### `npm start`
 
