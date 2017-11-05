@@ -3,7 +3,7 @@
 
 - [Your First Component](#your-first-component)
 - [Working With Events](#working-with-events)
-- [Folder Structure](#folder-structure)
+- [Working With State](#working-with-state)
 - [Available Scripts](#available-scripts)
   - [npm start](#npm-start)
   - [npm test](#npm-test)
@@ -126,45 +126,53 @@ export default Product;
 ```
 
 Faire attention, c'est onClick et pas onSubmit.
+
 Il n'y a pas de parenthèse à this.buy
 
 
-## Folder Structure
+## Working With State
 
-After creation, your project should look like this:
+- Initialiser un state avec un objet qui aura comme clé/valeur qty:0
+- Ajouter dans la fonction buy la mise à jour de l'objet qty quand on clique sur buy
+- Indiquer en dessous du bouton buy la nouvelle quantité mise à jour.
 
 ```
-my-app/
-  README.md
-  node_modules/
-  package.json
-  public/
-    index.html
-    favicon.ico
-  src/
-    App.css
-    App.js
-    App.test.js
-    index.css
-    index.js
-    logo.svg
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class Product extends Component {
+  constructor() {
+    super();
+    this.state = {
+      qty:0
+    };
+  }
+
+  buy = () => {
+    alert("Vous avez acheté un smartphone Android");
+    this.setState({
+      qty: this.state.qty + 1
+    });
+  }
+
+  render() {
+    return (
+      <div className="App" >
+        <p>Android - 199€</p>
+        <button onClick={this.buy} type="submit">BUY</button>
+        <p>quantity:{this.state.qty}</p>
+      </div>
+    );
+  }
+}
+
+export default Product;
 ```
 
-For the project to build, **these files must exist with exact filenames**:
+Ne pas oublier qty à this.state
 
-* `public/index.html` is the page template;
-* `src/index.js` is the JavaScript entry point.
 
-You can delete or rename the other files.
-
-You may create subdirectories inside `src`. For faster rebuilds, only files inside `src` are processed by Webpack.<br>
-You need to **put any JS and CSS files inside `src`**, otherwise Webpack won’t see them.
-
-Only files inside `public` can be used from `public/index.html`.<br>
-Read instructions below for using assets from JavaScript and HTML.
-
-You can, however, create more top-level directories.<br>
-They will not be included in the production build so you can use them for things like documentation.
 
 ## Available Scripts
 
