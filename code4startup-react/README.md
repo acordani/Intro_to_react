@@ -2,7 +2,7 @@
 ## Table of Contents
 
 - [Your First Component](#your-first-component)
-- [Sending Feedback](#sending-feedback)
+- [Working With Events](#working-with-events)
 - [Folder Structure](#folder-structure)
 - [Available Scripts](#available-scripts)
   - [npm start](#npm-start)
@@ -95,9 +95,39 @@
 
 Mettre en place le premier component <App /> avec un rendu en jsx Hello World
 
-## Sending Feedback
+## Working with Events
 
-We are always open to [your feedback](https://github.com/facebookincubator/create-react-app/issues).
+- Appeler le component <Product/>
+- Mettre en paragraphe - Android - 199€
+- ajouter un bouton BUY
+- Créer une fonction sur le bouton. Au submit, il doit y avoir une alert js qui s'affiche: Vous avez acheté un smartphone Android.
+
+```
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class Product extends Component {
+
+  buy = () => {
+    alert("Vous avez acheté un smartphone Android");
+  }
+  render() {
+    return (
+      <div className="App" >
+        <p>Android - 199€</p>
+        <button onClick={this.buy} type="submit">BUY</button>
+      </div>
+    );
+  }
+}
+
+export default Product;
+```
+
+Faire attention, c'est onClick et pas onSubmit.
+Il n'y a pas de parenthèse à this.buy
+
 
 ## Folder Structure
 
