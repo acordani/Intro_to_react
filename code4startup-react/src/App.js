@@ -20,7 +20,7 @@ class Product extends Component {
   render() {
     return (
       <div className="App" >
-        <p>Android - 199€</p>
+        <p>{this.props.name} - {this.props.price}€</p>
         <button onClick={this.buy} type="submit">BUY</button>
         <p>quantity:{this.state.qty}</p>
         <hr/>
@@ -41,9 +41,9 @@ class ProductList extends React.Component {
   render() {
     return(
       <div>
-        <Product />
-        <Product />
-        <Product />
+        <Product name="Android" price={121} />
+        <Product name="Apple" price={100}/>
+        <Product name="Nokia" price={90}/>
         <Total />
       </div>
 

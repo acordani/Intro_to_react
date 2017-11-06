@@ -5,11 +5,7 @@
 - [Working With Events](#working-with-events)
 - [Working With State](#working-with-state)
 - [Reusable Components](#reusable-components)
-  - [npm start](#npm-start)
-  - [npm test](#npm-test)
-  - [npm run build](#npm-run-build)
-  - [npm run eject](#npm-run-eject)
-- [Supported Language Features and Polyfills](#supported-language-features-and-polyfills)
+- [Working With Property Data](#working-with-property-data)
 - [Syntax Highlighting in the Editor](#syntax-highlighting-in-the-editor)
 - [Displaying Lint Output in the Editor](#displaying-lint-output-in-the-editor)
 - [Debugging in the Editor](#debugging-in-the-editor)
@@ -178,13 +174,41 @@ Ne pas oublier qty à this.state
 
 Ajouter un component Total et un component ProductList
 
-### `npm start`
+```
+class Total extends React.Component {
+  render() {
+    return(
+      <h3>Total Cash: </h3>
+    )
+  }
+}
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+class ProductList extends React.Component {
+  render() {
+    return(
+      <div>
+        <Product />
+        <Product />
+        <Product />
+        <Total />
+      </div>
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+    )
+  }
+}
+
+export default ProductList;
+```
+
+### Working With Property Data
+
+- Ajouter les props aux components Product
+    - name="Android" price={121}
+    - name="Apple" price={134}
+    - name="Nokia" price={90}
+
+- Et rendre chaque product dans le jsx
+{this.props.name} {this.props.price}
 
 ### `npm test`
 
