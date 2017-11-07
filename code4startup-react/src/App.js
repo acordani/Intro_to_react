@@ -17,11 +17,16 @@ class Product extends Component {
     });
   }
 
+  show = () => {
+    this.props.handleShow(this.props.name);
+  }
+
   render() {
     return (
       <div className="App" >
         <p>{this.props.name} - {this.props.price}€</p>
         <button onClick={this.buy} type="submit">BUY</button>
+        <button onClick={this.show} type="submit">SHOW</button>
         <p>quantity:{this.state.qty}</p>
         <hr/>
       </div>
@@ -38,12 +43,17 @@ class Total extends React.Component {
 }
 
 class ProductList extends React.Component {
+
+  showProduct = (name) => {
+    alert('You selected' + name);
+  }
+
   render() {
     return(
       <div>
-        <Product name="Android" price={121} />
-        <Product name="Apple" price={100}/>
-        <Product name="Nokia" price={90}/>
+        <Product name="Android" price={121} handleShow={this.showProduct} />
+        <Product name="Apple" price={100} handleShow={this.showProduct} />
+        <Product name="Nokia" price={90} handleShow={this.showProduct} />
         <Total />
       </div>
 

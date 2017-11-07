@@ -6,7 +6,7 @@
 - [Working With State](#working-with-state)
 - [Reusable Components](#reusable-components)
 - [Working With Property Data](#working-with-property-data)
-- [Syntax Highlighting in the Editor](#syntax-highlighting-in-the-editor)
+- [Working With Property Function](#working-with-property-function)
 - [Displaying Lint Output in the Editor](#displaying-lint-output-in-the-editor)
 - [Debugging in the Editor](#debugging-in-the-editor)
 - [Formatting Code Automatically](#formatting-code-automatically)
@@ -207,13 +207,75 @@ export default ProductList;
     - name="Apple" price={134}
     - name="Nokia" price={90}
 
+```
+<div>
+        <Product name="Android" price={121} />
+        <Product name="Apple" price={100}/>
+        <Product name="Nokia" price={90}/>
+        <Total />
+      </div>
+```
+
 - Et rendre chaque product dans le jsx
 {this.props.name} {this.props.price}
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](#running-tests) for more information.
+```
+render() {
+    return (
+      <div className="App" >
+        <p>{this.props.name} - {this.props.price}€</p>
+        <button onClick={this.buy} type="submit">BUY</button>
+        <p>quantity:{this.state.qty}</p>
+        <hr/>
+      </div>
+    );
+  }
+}
+```
+
+### Working With Property Function
+
+- Ajouter un bouton SHOW pour chaque Product.
+
+Attention: La fonction doit être appelée dans le component <ProductList /> car les props des products(name...) sont dans ProductList.
+
+  - Créer un bouton Show dans <Product />
+
+```
+<button onClick={this.show} type="submit">SHOW</button>
+```
+
+- Créer la fonction show dans <Product />
+```
+show = () => {
+    
+}
+```
+
+Il faut passer les informations par les props des `<Products />` qui se situent dans `<ProductList />`
+
+Donc, a la suite des props name et price, on va passer la props `handleShow={this.showProduct}`
+
+```
+<Product name="Android" price={121} handleShow={this.showProduct} />
+```
+
+`this.showProduct` se refere à la fonction showProduct qui est dans le component `<ProductList />`
+
+```
+showProduct = (name) => {
+    alert('You selected' + name);
+  }
+```
+
+Puis pour terminer, dans la fonction show du component `<Product />`, mettre `this.props.handleShow(this.props.name)`
+
+```
+show = () => {
+    this.props.handleShow(this.props.name);
+  }
+```
 
 ### `npm run build`
 
