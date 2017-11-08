@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
 class Product extends Component {
@@ -41,7 +41,7 @@ class Total extends React.Component {
   render() {
     return(
       <h3>Total Cash: {this.props.total} </h3>
-    )
+    );
   }
 }
 
@@ -79,12 +79,31 @@ class ProductList extends React.Component {
     });
     
     return(
-      <div>
+      <div className="App">
+        <ProductForm />
         {products}
         <Total total={this.state.total} />
       </div>
 
     )
+  }
+}
+
+class ProductForm extends React.Component {
+
+  submit = (event) => {
+  event.preventDefault();
+  alert('Name: ' + this.name.value + ' € ' + this.price.value);
+  }
+
+  render() {
+    return(
+      <form onSubmit= {e => this.submit(e)} >
+        <input type="text" placeholder="Product Name" ref={(input) => this.name = input} />
+        <input type="text" placeholder="Product Price" ref={(input) => this.price = input} />
+        <button type="submit">Created Product</button>
+      </form>
+    );
   }
 }
 

@@ -9,6 +9,7 @@
 - [Working With Property Function](#working-with-property-function)
 - [Data Between Child Components](#data-between-child-components)
 - [Working With Array](#working-with-array)
+- [Adding Product Form](#adding-product-form)
 
 
 
@@ -322,4 +323,44 @@ const products = this.state.productList.map((product) => {
     </div>
   )
 });
+```
+
+Puis du coup, dans le render du component, on ajoute {products}
+
+## Adding Product Form
+
+Ajouter un formulaire ProductForm pour ajouter des telephones.
+
+Pour ajouter un formulaire, on va utiliser la balise `<form>`
+
+Puis on va utiliser la balise `<input>`
+
+Au niveau du `form`, on va ajouter une fonction sur le bouton avec `onClick`.
+
+Puis on va créer la fonction:
+```
+submit = () => {
+    
+  }
+```
+
+Afin de pouvoir capter les informations qui sont écrites dans les input, on va ajouter une `ref` aux  `input`.
+
+```
+<form onSubmit= {e => this.submit(e)} >
+  <input type="text" placeholder="Product Name" ref={(input) => this.name = input} />
+  <input type="text" placeholder="Product Price" ref={(input) => this.price = input} />
+  <button type="submit">Created Product</button>
+</form>
+```
+
+Puis on va demander à la fonction submit 
+
+de faire une alert en récupérant les informations de l'input.
+
+```
+submit = (event) => {
+  event.preventDefault();
+  alert('Name: ' + this.name.value + ' € ' + this.price.value);
+}
 ```
