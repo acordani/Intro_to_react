@@ -49,8 +49,13 @@ class ProductList extends React.Component {
   constructor() {
     super();
     this.state = {
-      total:0
-    }
+      total:0,
+      productList: [
+        { name: "Android", price: 121},
+        { name: "Apple", price: 220},
+        { name: "Nokia", price: 90},
+      ]
+    };
   }
 
   calculateTotal = (price) => {
@@ -64,11 +69,18 @@ class ProductList extends React.Component {
   }
 
   render() {
+    const component = this
+    const products = this.state.productList.map((product) => {
+      return(
+        <div>
+          <Product name={product.name} price={product.price} handleShow={component.showProduct} handleTotal={component.calculateTotal} />
+        </div>
+      )
+    });
+    
     return(
       <div>
-        <Product name="Android" price={121} handleShow={this.showProduct} handleTotal={this.calculateTotal} />
-        <Product name="Apple" price={100} handleShow={this.showProduct} handleTotal={this.calculateTotal}/>
-        <Product name="Nokia" price={90} handleShow={this.showProduct} handleTotal={this.calculateTotal}/>
+        {products}
         <Total total={this.state.total} />
       </div>
 
