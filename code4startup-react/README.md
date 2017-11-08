@@ -51,6 +51,7 @@ Faire attention, c'est onClick et pas onSubmit.
 
 Il n'y a pas de parenthèse à this.buy
 
+![react1](https://user-images.githubusercontent.com/10654877/32568673-3b9f7f2e-c4bf-11e7-86d8-d4ebc5597292.gif)
 
 ## Working With State
 
@@ -93,6 +94,9 @@ export default Product;
 ```
 
 Ne pas oublier qty à this.state
+
+
+![react2](https://user-images.githubusercontent.com/10654877/32568887-dcf1a762-c4bf-11e7-94c0-620ca89af1d1.gif)
 
 
 
