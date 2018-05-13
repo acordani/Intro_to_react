@@ -1,9 +1,9 @@
 ## Table
 
 - [Create App](#create-app)
-- [A l interieur du Fichier](#fichier)
-- [Création de Notre Composant Racine](#composant-racine)
-- [Utliser Notre Composant App](#utiliser-composant-app)
+- [A L interieur du Fichier](#a-l-interieur-du-fichier)
+- [Création de Notre Composant Racine](#creation-de-notre-composant-racine)
+- [Utliser Notre Composant App](#utiliser-notre-composant-app)
 
 ## Create App
 On crée une application avec create-react-app
@@ -20,7 +20,7 @@ Ca ouvre le navigateur sur localhost 3000
 
 image 1
 
-## A l interieur du Fichier
+## A L interieur du Fichier
 
 On efface tout le repertoire src
 
