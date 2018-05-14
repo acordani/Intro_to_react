@@ -1,11 +1,15 @@
 import React from 'react';
 
-class App extrends React.Component {
+import Form from './Form';
+import ItemList from './ItemList';
+
+class App extends React.Component {
 	render(){
 		return(
 			<div>
 				<h3>Liste des Courses</h3>
-        		<div>En construction</div>
+        		<Form />
+        		<ItemList />
 			</div>
 		);
 	}
